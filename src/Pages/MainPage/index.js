@@ -20,7 +20,7 @@ export default function MainPage() {
         <TitleLine src={"https://i.imgur.com/487txLB.png"}/>
         <TitleImage src={"https://i.imgur.com/BiBtC6x.png"}/>
         <ProductDesign>DESIGN DE PRODUTO</ProductDesign>
-        <MLogo src={"https://i.imgur.com/Lx7XxFx.png"}/>
+        <MLogo src={"https://i.imgur.com/dA8oxGU.png"}/>
         <VLine src={"https://i.imgur.com/7ydk6cF.png"}/>
         <AboutMeWrapper>
             <ShapesContainer>
