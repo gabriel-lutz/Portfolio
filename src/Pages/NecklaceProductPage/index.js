@@ -173,10 +173,14 @@ const ColumnsWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding-bottom: ${(props)=>props.marginBottom};
+    @media (max-width: 1000px){
+        flex-direction: column;
+    }
 `
 
 const Column = styled.div`
     width: ${(props)=> props.width};
+    max-width: 1000px;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: ${(props)=>props.marginTop};
@@ -186,31 +190,46 @@ const Column = styled.div`
     justify-content: center;
     align-items: ${(props)=> props.alignment};
     background-color: white;
+    @media (max-width: 1000px){
+    width: 80vw
+    }
 `
 
+
+
 const ScrollDiv = styled.div`
-    margin-left: 50px;
-    margin-right: 50px;
     margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    @media (max-width: 1000px){
+    width: 75vw
+    }
 `
 
 const FlickityImg = styled.img`
     width: 35vw !important;
+    @media (max-width: 1000px){
+    width: 75vw
+    }
 `
 
 const FlickityImgBig = styled.img`
-    width: 60vw !important;
+    width: 55vw !important;
 `
 
 const TitleImg = styled.img`
     width: 30vw;
     max-width: 450px;
-    margin-top: 250px;
+    margin-top: 50px;
 `
 
 const GenericImg = styled.img`
     margin-top: ${(props)=>props.marginTop};
     width: ${(props)=> props.width};
+    max-width: 1000px;
+    @media (max-width: 1000px){
+    width: 80vw
+    }
 `
 
 const BackButton = styled.button`
@@ -230,6 +249,9 @@ const BackButton = styled.button`
     cursor: pointer;
     &:hover{
         background-color: #E0DCD6;
+    }
+    img{
+        width: 30px
     }
 `
 

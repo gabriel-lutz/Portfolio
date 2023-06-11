@@ -23,11 +23,11 @@ export default function MainPage() {
         <MLogo src={"https://i.imgur.com/dA8oxGU.png"}/>
         <VLine src={"https://i.imgur.com/7ydk6cF.png"}/>
         <AboutMeWrapper>
-            <ShapesContainer>
+        <ShapesContainer>
                 <AboutMeBGShapesB src={"https://i.imgur.com/HEIuiMW.png"} zIndex={0}/>
                 <AboutMePhoto src={"https://i.imgur.com/4cAsDOW.png"}/>
                 <AboutMeBGShapes src={"https://i.imgur.com/OP2tPJY.png"} zIndex={1}/>
-            </ShapesContainer>
+                </ShapesContainer>
             <AboutMeTitle src={"https://i.imgur.com/VusCxbR.png"}/>
             <AboutMeText>Olá, seja bem vindo(a), sou estudante de Desenho Industrial - Bacharelado na Universidade Federal de Santa Maria, durante a trajetória no curso me identifico com Projeto de Produto e trilho meu caminho para me especializar nessa área. Possuo experiência com modelagem tridimensional e afinidade com desenvolvimento de Interfaces. Minha formação me faz uma profissional multidiciplinar e agrega no desenvolvimento de projetos de produto.</AboutMeText>
             <AboutMeName src ={"https://i.imgur.com/TuUtAlM.png"} />
@@ -39,19 +39,19 @@ export default function MainPage() {
             <Link to={`/coffe`}>
                 <ProductBox>
                     <ProductBoxTitle>conjunto <br></br>café</ProductBoxTitle>
-                    <ProductBoxImage src={"https://i.imgur.com/3gZu06U.png"} customSize={"390px"}></ProductBoxImage>
+                    <ProductBoxImage src={"https://i.imgur.com/3gZu06U.png"} customSize={"290px"}></ProductBoxImage>
                 </ProductBox>
             </Link>
             <Link to={`/necklace`}>
               <ProductBox>
                 <ProductBoxTitle>pingente <br></br>colar</ProductBoxTitle>
-                <ProductBoxImage src={"https://i.imgur.com/HwkK9dK.png"} customSize={"200px"}></ProductBoxImage>
+                <ProductBoxImage src={"https://i.imgur.com/HwkK9dK.png"} customSize={"130px"}></ProductBoxImage>
               </ProductBox>
             </Link>
             <Link to={`/dryer`}>
               <ProductBox>
                   <ProductBoxTitle>secador <br></br>PTS</ProductBoxTitle>
-                  <ProductBoxImage src={"https://i.imgur.com/gEs1rnq.png"} customSize={"300px"}></ProductBoxImage>
+                  <ProductBoxImage src={"https://i.imgur.com/gEs1rnq.png"} customSize={"200px"}></ProductBoxImage>
               </ProductBox>
             </Link>
 
@@ -88,13 +88,15 @@ const MainContainer = styled.div`
 `
 
 const TitleImage = styled.img`
-  width: 700px;
-  padding-top: 180px;
+  width: 60vw;
+  max-width: 500px;
+  padding-top: 130px;
   z-index: 1;
 `
 
 const TitleLine = styled.img`
-  height: 250px;
+  height: 170px;
+  max-height: 170px ;
   position: absolute;
   padding-top: 20px;
    z-index: 0;
@@ -122,7 +124,8 @@ const AboutMeWrapper = styled.div`
 `
 
 const AboutMeText = styled.p`
- width: 800px;
+ width: 85vw;
+ max-width: 800px;
  text-align: center;
  font-weight: 400;
  line-height: 26px; 
@@ -180,6 +183,7 @@ const AboutMeName = styled.img`
 
 const ProductTitle = styled.img`
     width: 460px;
+    max-width: 360px;
     padding-top: 200px;
     padding-bottom: 100px;
 `
@@ -197,8 +201,8 @@ const ProductBox = styled.button`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     background-color: #F5F4F5; //#C8C1B8;
     margin-left: 20px;
     margin-right: 20px;
@@ -220,7 +224,7 @@ const ProductBoxTitle = styled.p`
     max-lines: 2;
     text-align: center;
     font-family: Mont;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 50px;
     margin-top: 20px
 `

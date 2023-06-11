@@ -50,7 +50,7 @@ export default function DryerProductPage () {
                     Para contextualizar o problema do projeto foram considerada questões norteadoras sobre o tema, considerando que o probduto possui uma usabilidade e público inicial mais nichado, foi necessário fazer uma pesquisa sobre o alimento com qual o artefato terá contato e usabilidade, portanto definiu-se o que é a proteína e seus tipos com intuito de conhecer melhor o alimento que o produto projetado irá interagir.
                     </SectionText>
                     <ColumnsWrapper>
-                        <GenericImg src={"https://i.imgur.com/fSKjM0C.png"} marginTop={"40px"} width={"15vw"} marginRight="20px"/>
+                        <SmallImg src={"https://i.imgur.com/fSKjM0C.png"} marginTop={"40px"} width={"15vw"} marginRight="20px"/>
                         <SectionMidText top={"20px"}>
                         “A proteína Texturizada de Soja é um alimento feito a partir dos farelos que sobram da soja após a extração do óleo, é rico em fibras, tem baixo teor de gordura e também é o responsável pelos aminoácidos essenciais, as moléculas formadoras das proteínas no organismo, além de ser uma das opções mais baratas para substituir proteína animal, é um alimento interessante para incrementar a dieta e economizar.”
                         </SectionMidText>
@@ -272,10 +272,14 @@ const ColumnsWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding-bottom: ${(props)=>props.marginBottom};
+    @media (max-width: 1000px){
+        flex-direction: column;
+    }
 `
 
 const Column = styled.div`
     width: ${(props)=> props.width};
+    max-width: 1000px;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: ${(props)=>props.marginTop};
@@ -285,32 +289,51 @@ const Column = styled.div`
     justify-content: center;
     align-items: ${(props)=> props.alignment};
     background-color: white;
+    @media (max-width: 1000px){
+    width: 80vw
+    }
 `
 
+
+
 const ScrollDiv = styled.div`
-    margin-left: 50px;
-    margin-right: 50px;
     margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    @media (max-width: 1000px){
+    width: 75vw
+    }
 `
 
 const FlickityImg = styled.img`
     width: 35vw !important;
+    @media (max-width: 1000px){
+    width: 75vw
+    }
 `
 
 const FlickityImgBig = styled.img`
-    width: 60vw !important;
+    width: 55vw !important;
 `
 
 const TitleImg = styled.img`
     width: 30vw;
     max-width: 450px;
-    margin-top: 250px;
+    margin-top: 50px;
 `
 
 const GenericImg = styled.img`
     margin-top: ${(props)=>props.marginTop};
     width: ${(props)=> props.width};
-    margin-right: ${(props)=>props.marginRight};
+    max-width: 1000px;
+    @media (max-width: 1000px){
+    width: 80vw
+    }
+`
+
+const SmallImg = styled.img`
+    margin-top: ${(props)=>props.marginTop};
+    width: ${(props)=> props.width};
 `
 
 const BackButton = styled.button`
@@ -330,6 +353,9 @@ const BackButton = styled.button`
     cursor: pointer;
     &:hover{
         background-color: #E0DCD6;
+    }
+    img{
+        width: 30px
     }
 `
 
