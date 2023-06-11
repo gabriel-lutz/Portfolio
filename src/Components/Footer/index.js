@@ -24,7 +24,7 @@ const FooterWrapper = styled.div`
 const FooterShape = styled.img`
     width: 350px;
     position: absolute;
-    margin-top:  -105px;
+    margin-top:  -100px;
 `
 
 const FooterText = styled.p`

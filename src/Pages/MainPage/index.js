@@ -42,14 +42,19 @@ export default function MainPage() {
                     <ProductBoxImage src={"https://i.imgur.com/3gZu06U.png"} customSize={"390px"}></ProductBoxImage>
                 </ProductBox>
             </Link>
-            <ProductBox>
-            <ProductBoxTitle>pingente <br></br>colar</ProductBoxTitle>
+            <Link to={`/necklace`}>
+              <ProductBox>
+                <ProductBoxTitle>pingente <br></br>colar</ProductBoxTitle>
                 <ProductBoxImage src={"https://i.imgur.com/HwkK9dK.png"} customSize={"200px"}></ProductBoxImage>
-            </ProductBox>
-            <ProductBox>
-                <ProductBoxTitle>secador <br></br>PTS</ProductBoxTitle>
-                <ProductBoxImage src={"https://i.imgur.com/gEs1rnq.png"} customSize={"300px"}></ProductBoxImage>
-            </ProductBox>
+              </ProductBox>
+            </Link>
+            <Link to={`/dryer`}>
+              <ProductBox>
+                  <ProductBoxTitle>secador <br></br>PTS</ProductBoxTitle>
+                  <ProductBoxImage src={"https://i.imgur.com/gEs1rnq.png"} customSize={"300px"}></ProductBoxImage>
+              </ProductBox>
+            </Link>
+
 
         </ProductWrapper>
 
