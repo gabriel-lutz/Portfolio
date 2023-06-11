@@ -23,12 +23,9 @@ export default function DryerProductPage () {
                 </BackButton>
             </Link>
 
-            <BGDiv>
-                <MLogo src={"https://i.imgur.com/Vu9eo2F.png"}></MLogo>
-            </BGDiv>
-
-
             {/*Primeira linha*/}
+            <BackgroundLineWrapper>
+            <MLogo src={"https://i.imgur.com/6EexzAk.png"}></MLogo>
             <ColumnsWrapper>
                 <Column width="45vw" alignment={"center"}>
                     <TitleImg src={"https://i.imgur.com/NHi997x.png"}/>
@@ -37,7 +34,7 @@ export default function DryerProductPage () {
                     </SectionText>
                 </Column>
                 <Column width="45vw">
-                    <GenericImg src={"https://i.imgur.com/cSWDEsM.png"} marginTop={"250px"} width={"45vw"}/>
+                    <GenericImg src={"https://i.imgur.com/cSWDEsM.png"} marginTop={"50px"} width={"45vw"}/>
                 </Column>
             </ColumnsWrapper>
 
@@ -227,8 +224,8 @@ export default function DryerProductPage () {
             
              
             {/*LAST linha*/}
-            <ColumnsWrapper marginBottom="200px">
-                <Column  width="75vw">
+            <ColumnsWrapper >
+                <Column width="75vw" paddingBottom="200px">
                     <SectionTitleWrapper justify="center">
                         <SectionNumber>10</SectionNumber>
                         <SectionTitle>RESULTADO</SectionTitle>
@@ -244,37 +241,29 @@ export default function DryerProductPage () {
                     </ScrollDiv>
                 </Column>
             </ColumnsWrapper>
-
+            </BackgroundLineWrapper>
             <Footer></Footer>
         </>
 
     )
 }
 
+
+const BackgroundLineWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://i.imgur.com/3svRD5K.png");
+    background-repeat: repeat-y;
+    background-clip: content-box;
+    background-size: 160px;
+    background-position: 50%;
+`
+
 const MLogo = styled.img`
   padding-top: 40px;
   width: 150px;
-  position: absolute;
-  margin: 50%;
-`
-const VLine = styled.img`
-  height: ${(props)=>props.height};
-  width: 2px;
-  bottom: 0px;
-  top: 150px;
-  position: absolute;
-`
-
-const BGDiv = styled.div`
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    margin-top: 50px;
-    width: 100vw;
-    height: 150px
-    
+  background-color: white;
 `
 
 const ColumnsWrapper = styled.div`
@@ -282,7 +271,7 @@ const ColumnsWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: ${(props)=>props.marginBottom};
+    padding-bottom: ${(props)=>props.marginBottom};
 `
 
 const Column = styled.div`
@@ -290,10 +279,12 @@ const Column = styled.div`
     margin-left: 25px;
     margin-right: 25px;
     margin-top: ${(props)=>props.marginTop};
+    padding-bottom: ${(props)=>props.paddingBottom};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: ${(props)=> props.alignment};
+    background-color: white;
 `
 
 const ScrollDiv = styled.div`
@@ -311,7 +302,8 @@ const FlickityImgBig = styled.img`
 `
 
 const TitleImg = styled.img`
-    width: 450px;
+    width: 30vw;
+    max-width: 450px;
     margin-top: 250px;
 `
 
